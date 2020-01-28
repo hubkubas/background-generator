@@ -1,8 +1,9 @@
-var css = document.querySelector("h3");
-var color1 = document.querySelector(".color1");
-var color2 = document.querySelector(".color2");
-var body = document.getElementById("gradient");
-var button = document.getElementById("enter");
+var css     = document.querySelector("h3");
+var color1  = document.querySelector(".color1");
+var color2  = document.querySelector(".color2");
+var body    = document.getElementById("gradient");
+var button  = document.getElementById("enter");
+var text    = document.querySelector(".text");
 
 function setGradient() {
     body.style.background =
@@ -13,6 +14,11 @@ function setGradient() {
         + ")";
 
     css.textContent = body.style.background + ";";
+}
+
+function setTextColor() {
+    document.querySelector("h1").style.color = text.value;
+
 }
 
 // this function generates random background with the click
@@ -59,5 +65,7 @@ function displayInitialGradient() {
 color1.addEventListener("input", setGradient);
 
 color2.addEventListener("input", setGradient);
+
+text.addEventListener("input", setTextColor);
 
 button.addEventListener("click", displayRandomBackground);
