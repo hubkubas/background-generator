@@ -15,51 +15,20 @@ function setGradient() {
     css.textContent = body.style.background + ";";
 }
 
-/// these two functions return numbers from 0 - 255
-function randomNumLeft(min, max) {
-    var leftColor = [];
-    for (var i = 0; i < 3; i++) {
-        leftColor.push(Math.floor(Math.random() * max) + min);
-    }
-    return leftColor;
-};
+// this function generates random background with the click
+function displayRandomBackground() {
+// this part generates right color
+    var rR = Math.floor(Math.random() * 256);
+    var gR = Math.floor(Math.random() * 256);
+    var bR = Math.floor(Math.random() * 256);
+    var randomRight = "rgb(" + rR + ", " + gR + ", " + bR + ")";
 
+    // this part generates left color
+    var rL = Math.floor(Math.random() * 256);
+    var gL = Math.floor(Math.random() * 256);
+    var bL = Math.floor(Math.random() * 256);
+    var randomLeft = "rgb(" + rL + ", " + gL + ", " + bR + ")";
 
-function randomNumRight(min, max) {
-    var rightColor = [];
-    for (var i = 0; i < 3; i++) {
-        rightColor.push(Math.floor(Math.random() * max) + min);
-    }
-    return rightColor
-};
-
-function display() {
-
-    function right(min, max) {
-        var rightColor = [];
-        for (var i = 0; i < 3; i++) {
-            rightColor.push(Math.floor(Math.random() * max) + min);
-        }
-        return rightColor;
-    };
-    var firstRight = right(0, 256)[0];
-    var secondRight = right(0, 256)[1];
-    var thirdRight = right(0, 256)[2];
-    var randomRight = "rgb(" + firstRight + ", " + secondRight + ", " + thirdRight + ")";
-    // console.log(randomRight);
-
-    function left(min, max) {
-        var leftColor = [];
-        for (var i = 0; i < 3; i++) {
-            leftColor.push(Math.floor(Math.random() * max) + min);
-        }
-        return leftColor;
-    };
-    var firstLeft = left(0, 256)[0];
-    var secondLeft = left(0, 256)[1];
-    var thirdLeft = left(0, 256)[2];
-    var randomLeft = "rgb(" + firstLeft + ", " + secondLeft + ", " + thirdLeft + ")";
-    // console.log(randomLeft);
 
     body.style.background =
         "linear-gradient(to right, "
@@ -72,21 +41,10 @@ function display() {
 }
 
 
-// function randomColors(min,max){
-//     randomNumLeft();
-//     randomNumRight();
-// }
 
 
 color1.addEventListener("input", setGradient);
 
 color2.addEventListener("input", setGradient);
 
-button.addEventListener("click", display);
-
-// button.addEventListener("click", test);
-
-//here I console log the results which are 3 x numbers from 0 - 255
-//  console.log(randomNumLeft(0,256));
-//  console.log(randomNumRight(0,256));
-
+button.addEventListener("click", displayRandomBackground);
