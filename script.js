@@ -45,8 +45,8 @@ function display() {
     var firstRight = right(0, 256)[0];
     var secondRight = right(0, 256)[1];
     var thirdRight = right(0, 256)[2];
-    var randomRight = "rgb(" + firstRight + ", " + secondRight + ", " + thirdRight +")";
-    console.log(randomRight);
+    var randomRight = "rgb(" + firstRight + ", " + secondRight + ", " + thirdRight + ")";
+    // console.log(randomRight);
 
     function left(min, max) {
         var leftColor = [];
@@ -58,17 +58,17 @@ function display() {
     var firstLeft = left(0, 256)[0];
     var secondLeft = left(0, 256)[1];
     var thirdLeft = left(0, 256)[2];
-    var randomLeft = "rgb(" + firstLeft + ", " + secondLeft + ", " + thirdLeft +")";
-    console.log(randomLeft);
+    var randomLeft = "rgb(" + firstLeft + ", " + secondLeft + ", " + thirdLeft + ")";
+    // console.log(randomLeft);
 
     body.style.background =
-    "linear-gradient(to right, "
-    + randomRight
-    + ", "
-    + randomLeft
-    + ")";
+        "linear-gradient(to right, "
+        + randomRight
+        + ", "
+        + randomLeft
+        + ")";
 
-css.textContent = body.style.background + ";";
+    css.textContent = body.style.background + ";";
 }
 
 
