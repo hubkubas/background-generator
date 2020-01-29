@@ -1,0 +1,23 @@
+{
+  "name": "background-generator",
+  "version": "1.0.0",
+  "description": "This is a backgroud colors generator. Please feel free to use it and generate the colors :)",
+  "main": "script.js",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hubkubas/background-generator.git"
+  },
+  "author": "Hubert Kubasiewicz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hubkubas/background-generator/issues"
+  },
+  "homepage": "https://github.com/hubkubas/background-generator#readme"
+}
