@@ -4,7 +4,7 @@
   "description": "This is a backgroud colors generator. Please feel free to use it and generate the colors :)",
   "main": "script.js",
   "dependencies": {
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {},
   "scripts": {
